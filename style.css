@@ -1,0 +1,277 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4facfe;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    background: #333;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #444;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background: #555;
+}
+
+/* Hover effect */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px;
+    color: rgb(0, 0, 0);
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card h2 {
+    border-left: 5px solid #4facfe;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #4facfe;
+    object-fit: cover;
+}
+
+.profile p {
+    margin-bottom: 8px;
+}
+
+/* ABOUT */
+.about {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* PENDIDIKAN */
+.education ul {
+    list-style: none;
+}
+
+.education li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* SKILLS */
+.skill {
+    margin: 15px 0;
+}
+
+.skill p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 12px;
+    background: #4facfe;
+}
+
+/* PROJECT */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background: #79aeea;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item h3 {
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.project-item a {
+    text-decoration: none;
+    color: #4f33de;
+    font-weight: bold;
+}
+
+.project-item a:hover {
+    color: #0f0f0f;
+}
+
+/* GALERI */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    object-fit: cover;
+    height: 150px;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* KONTAK */
+.contact a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    color: #0046a8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+}
